@@ -9,7 +9,7 @@ User.destroy_all
  
 User.create(
   email: "ksliberatol@unal.edu.co",
-  password: "1234",
-  name: "Kevin Steven Liberato",
+  password: "123456",
+  name: "Kevin Liberato",
   nickname: "ksliberatol"
 )

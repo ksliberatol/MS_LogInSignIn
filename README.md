@@ -1,7 +1,7 @@
+# Autenticación
 ## Registro
-* endpoint: localhost:5001/auth/
-
-* petición (POST):
+* localhost:5001/auth/
+* POST
 {
   "email": "ejemplo@email.com",  
   "name": "nombre_ej",  
@@ -10,12 +10,15 @@
   "password_confirmation": "123456"  
 }
 * respuesta: 200 OK
-
 ## Login
-* endpoint: localhost:5001/auth/sign_in
-* petición (POST):
+* localhost:5001/auth/sign_in
+* POST
 {
   "email": "ejemplo@email.com",  
   "password": "123456"
 }
 * respuesta: 200 OK
+
+## Consulta
+* localhost:5001/users/id
+* GET

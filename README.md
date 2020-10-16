@@ -1,7 +1,23 @@
-# Autenticación
+# Microservicio de Autenticación
+
+Permite loguearse, registrarse y realizar consultas a usuarios por id y para verlos todos
+
+## Iniciar sesión (Unico usuario para pruebas)
+
+* endpoint: localhost:5001/auth/sign_in
+* petición (POST):
+
+{
+  "email": "ercruzr@unal.edu.co",  
+  "password": "123456"
+}
+* respuesta: 200 OK
+
 ## Registro
-* localhost:5001/auth/
-* POST
+
+* endpoint: localhost:5001/auth/
+* petición (POST):
+
 {
   "email": "ejemplo@email.com",  
   "name": "nombre_ej",  
@@ -10,15 +26,21 @@
   "password_confirmation": "123456"  
 }
 * respuesta: 200 OK
-## Login
-* localhost:5001/auth/sign_in
-* POST
-{
-  "email": "ejemplo@email.com",  
-  "password": "123456"
-}
+
+## Consulta por id del usuario
+* endpoint: localhost:5001/users/id
+* petición (GET):
 * respuesta: 200 OK
 
-## Consulta
-* localhost:5001/users/id
-* GET
+## Consulta todos los usuarios
+* endpoint: localhost:5001/users/
+* petición (GET):
+* respuesta: 200 OK
+
+## Cerrar sesión
+* endpoint: localhost:5001/auth/sign_out
+* petición (DELETE):
+En los Headers, pasar parametros de access-token, client y uid
+* respuesta: 200 OK
+
+Fuente: https://devise-token-auth.gitbook.io/devise-token-auth/usage

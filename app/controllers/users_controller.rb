@@ -7,6 +7,11 @@ class UsersController < ApplicationController
     render json: @user 
     #render :json=> @user.as_json(:tokens=>@user.tokens)
     #render :json=> @user.as_json(:token=>@user.tokens)
+  end
+
+  def index
+    @user = User.all
+    render json: @user
   end 
 
   private

@@ -8,7 +8,7 @@ Permite loguearse, registrarse y realizar consultas a usuarios por id y para ver
 * petición (POST):
 
 {
-  "email": "ercruzr@unal.edu.co",  
+  "email": "ksliberatol@unal.edu.co",  
   "password": "123456"
 }
 * respuesta: 200 OK

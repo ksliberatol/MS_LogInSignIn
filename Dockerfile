@@ -19,6 +19,6 @@ RUN bundle binstubs bundler --force
 RUN bundle install
 
 
-ADD . /LogSign_ms
+ADD . /logsign_ms
  
 EXPOSE 5001

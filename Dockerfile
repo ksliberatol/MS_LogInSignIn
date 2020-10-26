@@ -1,10 +1,10 @@
 FROM ruby:2.4.1
  
-RUN mkdir /logSign_ms
-WORKDIR /logSign_ms
+RUN mkdir /logsign_ms
+WORKDIR /logsign_ms
  
-ADD Gemfile /logSign_ms/Gemfile
-ADD Gemfile.lock /logSign_ms/Gemfile.lock
+ADD Gemfile /logsign_ms/Gemfile
+ADD Gemfile.lock /logsign_ms/Gemfile.lock
 
 RUN apt-get update
 RUN apt-get install -y sqlite3 libsqlite3-dev

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   #before_action :set_user, only: [:show]
 
   def show 
-	  @user = user = User.find(params[:email])
+	  @user = User.find(params[:email])
     render json: @user 
     #render :json=> @user.as_json(:tokens=>@user.tokens)
     #render :json=> @user.as_json(:token=>@user.tokens)

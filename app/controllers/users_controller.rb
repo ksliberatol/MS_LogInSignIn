@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
   def show 
-	  @user = User.find(params[:uid])
+	  @user = user = User.find_by_email!(params[:email])
     render json: @user 
     #render :json=> @user.as_json(:tokens=>@user.tokens)
     #render :json=> @user.as_json(:token=>@user.tokens)
@@ -16,10 +16,10 @@ class UsersController < ApplicationController
 
   private
     def set_user
-      @user = User.find(params[:uid])
+      @user = User.find(params[:id])
     end
   
     def user_params
-      params.require(:user).permit(:uid)
+      params.require(:user).permit(:id)
     end
 end
